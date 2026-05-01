@@ -10,7 +10,7 @@ spec:
   source:
     repoURL: https://github.com/HKEV07/P3.git
     targetRevision: HEAD
-    path: P3/confs            # Argo CD looks for manifests here
+    path: confs            # Argo CD looks for manifests here
 
   destination:
     server: https://kubernetes.default.svc
