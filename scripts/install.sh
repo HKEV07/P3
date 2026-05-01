@@ -67,7 +67,7 @@ sleep 10
 
 PASSWORD=""
 for i in {1..120}; do
-  PASSWORD=$(kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath='{.data.password}' 2>/dev/null | base64 -d 2>/dev/null)
+  PASSWORD=$(su - vagrant -c "kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath='{.data.password}' 2>/dev/null | base64 -d 2>/dev/null")
   if [ -n "$PASSWORD" ]; then
     echo "✓ Secret found!"
     echo ""
@@ -86,7 +86,7 @@ if [ -z "$PASSWORD" ]; then
   echo "✗ Could not retrieve password (timeout)"
   echo ""
   echo "  Retrieve password manually with:"
-  echo "  kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath='{.data.password}' | base64 -d"
+  echo "  su - vagrant -c \"kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath='{.data.password}' | base64 -d\""
 fi
 
 echo ""
