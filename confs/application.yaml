@@ -9,7 +9,7 @@ spec:
 
   source:
     repoURL: https://github.com/YOUR_LOGIN/YOUR_REPO
-    targetRevision: HEAD
+    targetRevision: MAIN
     path: P3/confs            # Argo CD looks for manifests here
 
   destination:
