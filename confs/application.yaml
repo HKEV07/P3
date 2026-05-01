@@ -8,9 +8,9 @@ spec:
   project: default
 
   source:
-    repoURL: https://github.com/HKEV07/P3.git
+    repoURL: https://github.com/HKEV07/inception-of-things.git
     targetRevision: main
-    path: confs            # Argo CD looks for manifests here
+    path: P3/confs            # Argo CD looks for manifests here
 
   destination:
     server: https://kubernetes.default.svc
