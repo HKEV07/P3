@@ -8,8 +8,8 @@ spec:
   project: default
 
   source:
-    repoURL: https://github.com/YOUR_LOGIN/YOUR_REPO
-    targetRevision: MAIN
+    repoURL: https://github.com/HKEV07/P3.git
+    targetRevision: HEAD
     path: P3/confs            # Argo CD looks for manifests here
 
   destination:
