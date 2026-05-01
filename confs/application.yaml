@@ -9,7 +9,7 @@ spec:
 
   source:
     repoURL: https://github.com/HKEV07/P3.git
-    targetRevision: HEAD
+    targetRevision: main
     path: confs            # Argo CD looks for manifests here
 
   destination:
